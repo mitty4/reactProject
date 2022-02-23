@@ -13,7 +13,7 @@ function Instagram(){
       const fetchpictures=async()=>{
         // const client = createClient('563492ad6f91700001000001735a8d9b57c24543a58c7f9c02b3e638');
         const query = 'Nature';
-        const token = "563492ad6f91700001000001735a8d9b57c24543a58c7f9c02b3e638"
+        const token = 
         const url = `https://api.pexels.com/v1/search?query=${instaTopic}&per_page=20`
 
 
@@ -54,12 +54,21 @@ function Instagram(){
   return (
 
 
-    <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-end", minHeight:"100vh", minWidth:"100vw"}}>
+    <div style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "flex-end",
+      minHeight:"100vh",
+      minWidth:"100vw",
+      backgroundColor: "#fafafa"
+    }}>
     <form onSubmit={handleSubmit}>
     <TextField
+    defaultValue={instaTopic}
     onChange={e => setInstaTopic(e.target.value)}
     id="outlined-basic"
-    label="Search Mitchell's portfolio"
+    label="Search pictures"
     size="small"
     variant="outlined"
     />
