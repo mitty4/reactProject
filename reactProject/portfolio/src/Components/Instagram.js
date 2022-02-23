@@ -2,6 +2,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {ImageList, ImageListItem, TextField} from '@mui/material';
+import {pex} from "../token.js"
 // import { createClient } from 'pexels';
 // res.data.photos[0].src.small
 
@@ -13,7 +14,7 @@ function Instagram(){
       const fetchpictures=async()=>{
         // const client = createClient('563492ad6f91700001000001735a8d9b57c24543a58c7f9c02b3e638');
         const query = 'Nature';
-        const token = 
+        const token = pex.t
         const url = `https://api.pexels.com/v1/search?query=${instaTopic}&per_page=20`
 
 
